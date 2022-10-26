@@ -6,7 +6,7 @@ branches:
   only:
     - main
 
-build: off
+build: off #123
 
 install:
   - java -jar ./artifacts/app-card-delivery.jar &
