@@ -19,11 +19,6 @@ public class CardFormDeliveryTest {
         return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern(pattern));
     }
 
-    @BeforeAll
-    static void setUpAll() {
-        WebDriverManager.chromedriver().setup();
-    }
-
     @BeforeEach
     void openUrlInBrowser() {
         open("http://localhost:9999");
