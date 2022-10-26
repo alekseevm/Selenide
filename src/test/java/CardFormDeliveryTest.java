@@ -15,18 +15,16 @@ import static com.codeborne.selenide.Condition.*;
 
 
 public class CardFormDeliveryTest {
+    String generateDate(int days, String pattern) {
+        return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern(pattern));
+    }
 
     @BeforeAll
     static void setUpAll() {
         WebDriverManager.chromedriver().setup();
     }
 
-
     @BeforeEach
-    String generateDate(int days, String pattern) {
-        return LocalDate.now().plusDays(days).format(DateTimeFormatter.ofPattern(pattern));
-    }
-
     void openUrlInBrowser() {
         open("http://localhost:9999");
     }
