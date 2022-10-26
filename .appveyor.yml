@@ -1,4 +1,4 @@
-image: Ubuntu
+image: Ubuntugit
 
 stack: jdk 11
 
@@ -12,5 +12,6 @@ install:
   - java -jar ./artifacts/app-card-delivery.jar &
 
 build_script:
-- chmod +x gradlew
-- ./gradlew test -Dselenide.headless=true --info
+  - chmod +x gradlew
+  - ./gradlew test -Dselenide.headless=true --info
+
