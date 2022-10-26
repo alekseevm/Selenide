@@ -31,13 +31,6 @@ public class CardFormDeliveryTest {
         open("http://localhost:9999");
     }
 
-    void setUp() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--headless");
-        ChromeDriver driver = new ChromeDriver(options);
-    }
 
     @Test
     void shouldSuccessfulSentForm() {
